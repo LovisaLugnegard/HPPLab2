@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void print_array();
+void sum_array();
+
+int i, size;
+int *array;
+int n;
+
+main(){
+
+  array = malloc(20* sizeof(int));
+  i = 0;
+  size = 20;
+  printf("\nEnter array (char to end)");
+  while (scanf("%d ", &n) == 1){
+     if(i>size){
+       printf("\n in if i = %d ", i);
+       size = size + 20;
+       array = (int *)realloc(array, size);
+     }
+     array[i] = n;   
+     i++;
+  }  
+
+ print_array(array, i); 
+ sum_array(array,i);
+}
+
+
+void print_array(int *arr, int n){
+  int i;
+  for(i=0; i<n; i++){
+    printf("%d ", arr[i]);
+  }
+}  
+
+void sum_array(int *array, int n){
+  int i;
+  int sum = 0;
+  for(i=0; i<n; i++){
+    sum = sum + array[i];
+  }
+  printf("\nSum: %d\n", sum);
+}

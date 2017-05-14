@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+
+int a, b, remainer;
+int quotient;
+
+main(){
+  printf("\nEnter a dividend: ");
+  scanf("%d",&a);
+  printf("\nEnter a divisor: ");  
+  scanf("%d",&b); 
+   
+  quotient = floor(a/b);
+  remainer = a%b;
+  
+  printf("\n quotient: %d remainer: %d \n", quotient, remainer);
+  
+}

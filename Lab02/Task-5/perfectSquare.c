@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+
+float num, sq;
+
+main(){
+  printf("\nEnter a number to check ");
+  scanf("%g", &num);
+  
+  sq = sqrt(num);
+  
+  if(ceil(sq) == sq){
+    printf("\n%g is a perfect square. \n",num);
+  }
+  else{
+    printf("\n%g is not a perfect square. \n",num);
+  }
+}
